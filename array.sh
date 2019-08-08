@@ -26,4 +26,23 @@ echo "数组长度是 ${#mArray[@]}"
 echo "数组长度是 ${#mArray[*]}"
 
 # 数组截取
-echo ${}
+# 可以获取子数组，下面示例为获取数组的第 1、2 下标位置的元素
+echo ${mArray[@]: 1:2}
+# 可以获取数组中某个元素的若干字符，下面示例为获取数组中第二个元素的 从0开始 3个字符
+echo ${mArray[1]: 0:3}
+
+# 合并数组
+Front=("javascript" "typescript")   # 数组声明也可以忽略 declear -a
+Conn=(${mArray[@]} ${Front[@]})
+echo ${Conn[@]}
+echo ${#Conn[@]}            # 合并得到数组的长度
+
+# 替换元素
+mArray=(${mArray[@] /123/"java"})
+echo ${mArray[@]}
+
+# 取消数组或元素
+unset mArray[1]
+echo "取消下标为 1 的元素后，数组为：${mArray[@]}，数组长度为 ${#mArray[@]}"
+# 需要注意的是，数组的 1 位置的元素变为了空，而不是后面的元素向前移动
+echo "数组 1 位置的元素为 ${mArray[1]}， 2 位置的元素为 ${mArray[2]}"
