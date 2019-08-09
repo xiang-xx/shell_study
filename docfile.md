@@ -356,7 +356,7 @@ rm tmp.sh
 ### 循环
 
 ```bash
-#!/bin/bash.sh
+#!/bin/bash
 # 循环
 # Shell 的循环主要有 for、while、until、select 几种
 
