@@ -37,3 +37,5 @@ case $NUM in
 2) echo "输入为 2" ;;
 *) echo "输入为 其他" ;;
 esac
+
+rm tmp.sh

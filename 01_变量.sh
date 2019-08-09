@@ -1,5 +1,6 @@
 #!/bin/bash
 # 变量
+echo "01_变量.sh"
 
 # 变量定义与赋值，等号两边不能用空格分开
 name=hahahaha

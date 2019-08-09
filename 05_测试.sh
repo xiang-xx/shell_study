@@ -98,3 +98,4 @@ echo '[ -e tmp.sh ] && [ -e tmp1.sh ]' $?
 echo '[ -e tmp.sh ] || [ -e tmp1.sh ]' $?
 
 rm tmp.sh
+rm string2
